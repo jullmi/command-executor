@@ -10,12 +10,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.App = void 0;
+const ffmpeg_executor_1 = require("./commands/ffmpeg/ffmpeg.executor");
 const console_logger_1 = require("./out/console-logger/console-logger");
-const dir_executor_1 = require("./commands/dir/dir.executor");
 class App {
     run() {
         return __awaiter(this, void 0, void 0, function* () {
-            yield new dir_executor_1.DirExecutor(console_logger_1.ConsoleLogger.getInstance()).execute();
+            yield new ffmpeg_executor_1.FfmpegExecutor(console_logger_1.ConsoleLogger.getInstance()).execute();
         });
     }
 }
